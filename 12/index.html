@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта желаний</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h1> Карта желаний</h1>
+        
+        <!-- Кнопка добавления -->
+        <button id="showFormBtn" class="add-btn"> Добавить желание</button>
+
+        <!-- Форма -->
+        <div id="wishForm" class="form" style="display:none;">
+            <h2>Новое желание</h2>
+            
+            <div class="field">
+                <label for="wishTitle">Название:</label>
+                <input type="text" id="wishTitle" placeholder="Путешествие в Париж">
+            </div>
+            
+            <div class="field">
+                <label for="wishCategory">Категория:</label>
+                <select id="wishCategory">
+                    <option value="Путешествия"> Путешествия</option>
+                    <option value="Покупки"> Покупки</option>
+                    <option value="Здоровье"> Здоровье</option>
+                    <option value="Карьера"> Карьера</option>
+                    <option value="Обучение"> Обучение</option>
+                    <option value="Другое"> Другое</option>
+                </select>
+            </div>
+            
+            <div class="field">
+                <label for="wishImage">Ссылка на картинку:</label>
+                <input type="text" id="wishImage" placeholder="https://example.com/image.jpg">
+            </div>
+            
+            <div class="form-buttons">
+                <button id="saveWishBtn" class="save-btn"> Сохранить</button>
+                <button id="cancelBtn" class="cancel-btn"> Отмена</button>
+            </div>
+        </div>
+
+        <!-- Карточки -->
+        <div class="wishes" id="wishesContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
